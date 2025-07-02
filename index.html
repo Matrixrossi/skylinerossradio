@@ -1,268 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unity Radio - Your #1 Station</title>
-  <meta name="description" content="We're Unity Radio, your number #1 station bringing you the latest and greatest hits!">
-  <meta name="keywords" content="Radio, Online Radio, Music, Number 1 Radio, Best Radio, Internet Radio">
-  <meta name="author" content="Byte Graphics Design">
-  <link rel="stylesheet" href="./src/styles.css">
-  <script src="https://kit.fontawesome.com/d90930c5a4.js" crossorigin="anonymous"></script>
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="src/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="src/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="src/favicon/favicon-16x16.png">
-  <link rel="manifest" href="src/favicon/site.webmanifest">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ross's Radio</title>
+    <link rel="stylesheet" href="styles.css" />
+    
+    <!-- Favicons and manifest temporarily disabled to prevent 404 errors -->
+    <!--
+    <link rel="apple-touch-icon" sizes="180x180" href="src/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="src/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="src/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="src/favicon/site.webmanifest" />
+    -->
 </head>
 <body>
-  <div id="overlay">
-    <nav>
-      <ul>
-        <li><a href="index.html"><img id="headerInfo" src="src/UR-Logo.png" alt="Unity Radio Logo"></a></li>
-        <!-- <li><a href="index.html">Home</a></li> -->
-        <!-- <li><a href="#">Timetable</a></li> -->
-        <li class="hideOnMobile"><a id="applicationFormButton">Apply</a></li>
-        <li class="hideOnMobile"><a href="https://discord.gg/yA5w7gYeyA" target="_blank">Discord</a></li>
-        <li class="hideOnDesk"><i class="fa-solid fa-bars"></i></li>
-      </ul>
-      <div class="navMenuSS">
-        <ul>
-          <li class="hideOnDesk"><i class="fa-solid fa-x"></i></li>
-          <li class="hideOnMobile"><a href="#">Apply</a></li>
-          <li class="hideOnMobile"><a href="#">Discord</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div id="parentPresenter">
-      <div class="presenter">
-        <div class="presenterInline">
-          <div class="albumCoverBG">
-            <img id="albumCover" src="src/default-cover.jpg" alt="Album Cover">
-          </div>
-        </div>
-        <div class="presenterInline">
-          <div class="presenterSpace">
-            <div class="presenterNowPlaying">
-              <h2 id="songTitle">Loading...</h2>
-              <h3 id="artistName">Loading...</h3>
-              <div class="interactButtons">
-                <div id="playPauseControl" class="play-button"><i class="icon fa-solid fa-play"></i></div>
-              </div>
-              <!-- Audio Player (hidden) -->
-              <audio id="radioPlayer" src="https://vh-azura01.radio.volthosting.co.uk/listen/unity_radio/radio.mp3" preload="auto"></audio>
+    <header>
+        <img id="headerInfo" src="https://via.placeholder.com/100x50?text=Logo" alt="Unity Radio Logo" />
+        <!-- your other header content -->
+    </header>
+
+    <main>
+        <section>
+            <img id="albumCover" src="https://via.placeholder.com/150" alt="Album Cover" />
+            <img id="presenterImage" src="https://via.placeholder.com/150" alt="Presenter Cover" />
+
+            <div class="previousHits">
+                <img class="prev5HitsImg" src="https://via.placeholder.com/150" alt="Previous Hit Image" />
+                <img class="prev5HitsImg" src="https://via.placeholder.com/150" alt="Previous Hit Image" />
+                <img class="prev5HitsImg" src="https://via.placeholder.com/150" alt="Previous Hit Image" />
+                <img class="prev5HitsImg" src="https://via.placeholder.com/150" alt="Previous Hit Image" />
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="presenter">
-        <div class="presenterNameInline">
-          <div class="presenterNameSpace">
-            <h2 id="presenterName">Unity DJ</h2> <!-- Default to "Unity DJ" -->
-            <div id="nameRight">
-              <div class="interactButtonsContPre">
-                <h2 class="rightSpace messageButton" id="messageButton"><i class="icon fa-solid fa-message"></i></h2>
-                <h2 id="songRequestButton" class="songRequestButton"><i class="icon fa-solid fa-music"></i></h2>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="presenterInline">
-          <div class="presenterCoverBG">
-            <img id="presenterImage" src="src/default-cover.jpg" alt="Presenter Cover">
-          </div>
-        </div>
-      </div>
-    </div>
-    <section class="scroller hideOnTabMob">
-      <div class="volume-control">
-        <input type="range" id="volumeSlider" min="0" max="100" value="50">
-      </div>
-    </section>
-    <section class="hitsPresenters">
-      <div class="inlineHitsPresenterCont">
-        <div class="hitsCont">
-          <div class="hitsContainer">
-            <h2>Previous Hits</h2>
-            <div class="prev5Hits">
-              <div class="hitsContDiv">
-                <div>
-                  <img class="prev5HitsImg" src="src/default-cover.jpg" alt="Previous Hit Image">
-                </div>
-                <div>
-                  <h3 class="hit-name">Loading...</h3>
-                  <p class="hit-artist">Loading...</p>
-                </div>
-              </div>
-            </div>
-            <div class="prev5Hits prev5HitsSpace">
-              <div class="hitsContDiv">
-                <div>
-                  <img class="prev5HitsImg" src="src/default-cover.jpg" alt="Previous Hit Image">
-                </div>
-                <div>
-                  <h3 class="hit-name">Loading...</h3>
-                  <p class="hit-artist">Loading...</p>
-                </div>
-              </div>
-            </div>
-            <div class="prev5Hits prev5HitsSpace">
-              <div class="hitsContDiv">
-                <div>
-                  <img class="prev5HitsImg" src="src/default-cover.jpg" alt="Previous Hit Image">
-                </div>
-                <div>
-                  <h3 class="hit-name">Loading...</h3>
-                  <p class="hit-artist">Loading...</p>
-                </div>
-              </div>
-            </div>
-            <div class="prev5Hits prev5HitsSpace">
-              <div class="hitsContDiv">
-                <div>
-                  <img class="prev5HitsImg" src="src/default-cover.jpg" alt="Previous Hit Image">
-                </div>
-                <div>
-                  <h3 class="hit-name">Loading...</h3>
-                  <p class="hit-artist">Loading...</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="presenters">
-          <h2>Upcoming</h2>
-          <div class="presenterTimetableS">
-            <div class="presenterNow">
-              <div class="presenterNowCont presenterContent">
-                <div>
-                  <div>
-                    <img class="presenterNowIMG" src="src/default-cover.jpg" alt="Current Presenter Image">
-                  </div>
-                  <div>
-                    <h3>Unity DJ</h3>
-                    <p class="now-time now-time.flash">Now - 10:00</p> <!-- Time will update dynamically -->
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="presenterNext">
-              <div class="presenterNextCont presenterContent">
-                <div>
-                  <div>
-                    <img class="presenterNextIMG" src="src/default-cover.jpg" alt="Next Presenter Image">
-                  </div>
-                  <div>
-                    <h3>Unity DJ</h3>
-                    <p class="next-time">Next - 11:00</p> <!-- Time will update dynamically -->
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="presenterUpcoming">
-              <div class="presenterUpcomingCont presenterContent">
-                <div>
-                  <div>
-                    <img class="presenterUpcomingIMG" src="src/default-cover.jpg" alt="Upcoming Presenter Image">
-                  </div>
-                  <div>
-                    <h3>Unity DJ</h3>
-                    <p class="upcoming-time">Upcoming - 12:00</p> <!-- Time will update dynamically -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="advertisements">
-      <div id="advertIMG">
-        <h2>Advertisements</h2>
-        <img class="defaultAdvertCoverIMG" src="src/defaultAdvertCoverIMG.png" alt="Advertisement Banner/ Sponsors">
-      </div>
-    </section>
-    <div id="formModal" class="modal">
-      <div class="modal-content">
-          <span id="closeButton" class="close">&times;</span>
-          <h2>Request Line!</h2>
-          <form id="requestForm">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required>
-              <label for="song">Song:</label>
-              <input type="text" id="song" name="song" required>
-              <button class="submit" type="submit">Submit</button>
-          </form>
-      </div>
-  </div>
-  <div id="formModal1" class="modal1">
-      <div class="modal-content1">
-          <span id="closeButton1" class="close1">&times;</span>
-          <h2>Send us a message!</h2>
-          <form id="requestForm1">
-              <label for="name1">Name:</label>
-              <input type="text" id="name1" name="name1" required>
-              <label for="message">Message:</label>
-              <input type="text" id="message" name="message" required>
-              <button class="submit" type="submit">Submit</button>
-          </form>
-      </div>
-  </div>
-  <div id="formModal2" class="modal2">
-    <div class="modal-content2">
-        <span id="closeButton2" class="close1">&times;</span>
-        <h2>Application Form</h2>
-        <form id="requestForm2">
-            <label for="name2">Name:</label>
-            <input type="text" id="name2" name="name2" required>
-            <label for="dname">Discord Username:</label>
-            <input type="text" id="dname" name="dname" required>
-            <label for="role">What are you interested in?:</label>
-            <select id="role" required>
-                <option value="Radio Mentor">Radio Mentor</option>
-                <option value="Discord Moderator">Discord Moderator</option>
-                <option value="Radio Host">Radio Host</option>
-            </select>
-            <label for="whyjoin">Why do you want to join us?:</label>
-            <input type="text" id="whyjoin" name="whyjoin" required>
-            <label for="whyrole">Why are you interested in the role?:</label>
-            <input type="text" id="whyrole" name="whyrole" required>
-            <button class="submit" type="submit">Submit</button>
-        </form>
-    </div>
-</div>
+
+            <img class="presenterNowIMG" src="https://via.placeholder.com/150" alt="Current Presenter Image" />
+            <img class="presenterNextIMG" src="https://via.placeholder.com/150" alt="Next Presenter Image" />
+            <img class="presenterUpcomingIMG" src="https://via.placeholder.com/150" alt="Upcoming Presenter Image" />
+
+            <img class="defaultAdvertCoverIMG" src="https://via.placeholder.com/300x100?text=Advertisement" alt="Advertisement Banner/ Sponsors" />
+        </section>
+    </main>
+
     <footer>
-      <section class="footerClass">
-        <div class="footerCont">
-          <div class="footerDisplay inlineDisplay">
-            <img src="src/UR-Logo.png" alt="Unity Radio Logo">
-            <p class="spaceBelow2">
-              Unity Radio is an online radio station that provides music for our 
-              listeners globally. Unity Radio was founded in March 2024.
-            </p>
-            <p>All rights reserved, © Unity Radio 2024</p>
-          </div>
-          <div>
-            <h4>Pages</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <!-- <li><a href="#">Timetable</a></li> -->
-              <li><a href="https://discord.gg/yA5w7gYeyA" target="_blank">Discord</a></li>
-            </ul>
-          </div>
-          <!-- <div>
-            <h4>Legal</h4>
-            <ul>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of Service</a></li>
-            </ul>
-          </div> -->
-        </div>
-      </section>
+        <img src="https://via.placeholder.com/100x50?text=Logo" alt="Unity Radio Logo" />
+        <!-- your other footer content -->
     </footer>
-  </div>
-  <script src="src/scripts.js"></script>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
-
-
